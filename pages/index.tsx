@@ -16,39 +16,36 @@ export default function Home() {
         {/* BACKGROUND */}
         <div className="fixed inset-0 z-0 w-full h-screen">
           <Image
-            src="/images/team-1.jpg"
+            src="/images/service-collage.jpg"
             alt="Service collage background"
             fill
             className="object-cover object-center md:object-top"
             priority
           />
-          <div className="absolute inset-0 bg-black/85"></div>
+          <div className="absolute inset-0 bg-black/80"></div>
         </div>
 
         {/* CONTENT */}
         <div className="relative z-10 container mx-auto px-4">
           
-          {/* ================= HERO SECTION ================= */}
+          {/* HERO SECTION - NO LOGO HERE AT ALL */}
           <div className="py-24 md:py-32 text-center">
-            <div className="max-w-5xl mx-auto"> {/* ✅ Increased max-width from 4xl to 5xl */}
+            <div className="max-w-4xl mx-auto">
               
-              {/* Trust Badge (Top) */}
+              {/* Trust Badge */}
               <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/10 mb-8">
                 <span className="w-2.5 h-2.5 bg-[#ff8c00] rounded-full animate-pulse"></span>
-                <span className="text-white/90 text-base font-medium">Trusted by 1,000,000+ clients</span>
+                <span className="text-white/90 text-base font-medium">Trusted by 10,000+ clients</span>
               </div>
 
-              {/* ✅ BIGGER HERO TITLE (text-6xl to text-8xl) */}
               <h1 className="text-6xl md:text-8xl font-bold mb-8 leading-tight text-white drop-shadow-lg">
                 Book <span className="text-[#ff8c00]">trusted services</span> - fast, clean, and secure
               </h1>
               
-              {/* Subtitle */}
               <p className="text-xl md:text-3xl mb-12 text-white/90 max-w-3xl mx-auto leading-relaxed drop-shadow-md">
                 Konvag connects you to vetted service providers for home repairs, beauty, tech fixes, and logistics — with tracking and secure payments.
               </p>
               
-              {/* Buttons */}
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <Link href="/services">
                   <button className="bg-[#ff8c00] text-[#003d2e] px-10 py-5 rounded-xl font-bold text-xl hover:bg-[#e67a00] transition transform hover:scale-105 shadow-lg">
@@ -60,7 +57,7 @@ export default function Home() {
                 </button>
               </div>
 
-              {/* ✅ BIGGER STATS CARDS */}
+              {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 max-w-4xl mx-auto">
                 <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-[#ff8c00]/30 transition-all duration-300">
                   <div className="text-[#ff8c00] text-4xl mb-2">✅</div>
@@ -86,14 +83,14 @@ export default function Home() {
             </div>
           </div>
 
-          {/* ================= TRUSTED BY LOGO BAR ================= */}
+          {/* ================= TRUSTED PARTNERS (HIDDEN) ================= */}
+          {/*
           <div className="py-16 border-t border-white/10">
             <div className="text-center mb-10">
-              <p className="text-[#003d2e] text-sm uppercase tracking-widest font-medium bg-white/90 inline-block px-6 py-2 rounded-full">
+              <p className="text-white/50 text-sm uppercase tracking-widest font-medium">
                 Trusted by businesses and professionals worldwide
               </p>
             </div>
-            
             <div className="bg-white rounded-2xl p-6 md:p-10 shadow-2xl max-w-5xl mx-auto border border-gray-200">
               <div className="grid grid-cols-3 md:grid-cols-6 gap-6 md:gap-8 items-center">
                 <div className="flex items-center justify-center p-2 group hover:scale-110 transition-transform duration-300">
@@ -117,6 +114,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+          */}
 
           {/* ================= WHY CHOOSE KONVAG ================= */}
           <div className="py-16 border-t border-white/10">
@@ -206,7 +204,7 @@ export default function Home() {
 
           {/* ================= BOTTOM CTA ================= */}
           <div className="py-16 border-t border-white/10">
-            <div className="bg-gradient-to-br from-[#021410] to-[#00251d] rounded-3xl p-10 md:p-16 text-center border border-[#ff8c00]/30 shadow-2xl relative overflow-hidden">
+            <div className="bg-gradient-to-br from-[#003d2e] to-[#00251d] rounded-3xl p-10 md:p-16 text-center border border-[#ff8c00]/30 shadow-2xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-64 h-64 bg-[#ff8c00]/5 rounded-full blur-3xl"></div>
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#ff8c00]/5 rounded-full blur-3xl"></div>
               

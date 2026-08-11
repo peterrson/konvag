@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 import { FaUserCircle, FaBell, FaEnvelope, FaSearch } from 'react-icons/fa';
 import { useAuth } from '@/context/AuthContext';
 import NotificationDrawer from '@/components/notifications/NotificationDrawer';
@@ -54,16 +55,19 @@ export default function DashboardNavbar() {
   };
 
   return (
-    <nav className="bg-[#021410] shadow-lg fixed top-0 left-0 w-full z-50 border-b border-[#ff8c00]/20 h-20">
+    <nav className="bg-[#003d2e] shadow-lg fixed top-0 left-0 w-full z-50 border-b border-[#ff8c00]/20 h-20">
       <div className="container mx-auto px-4 h-full flex items-center justify-between">
         
-        <Link href="/dashboard/provider" className="flex items-center gap-4 group">
-          <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shrink-0">
-            <span className="text-3xl font-bold text-[#003d2e]">K</span>
-          </div>
-          <div className="flex flex-col items-start">
-            <span className="text-2xl font-bold text-white group-hover:text-[#ff8c00] transition">KONVAG</span>
-            <span className="text-[10px] tracking-[0.2em] font-semibold text-[#ff8c00]/80 uppercase">PREMIUM SERVICES MARKETPLACE</span>
+        {/* ✅ ONLY THE REAL LOGO - BIG & CURVED */}
+        <Link href="/dashboard/provider" className="flex items-center group">
+          <div className="w-16 h-16 relative rounded-2xl overflow-hidden shrink-0">
+            <Image
+              src="/logos/konvag-logo.png"
+              alt="Konvag"
+              fill
+              className="object-contain"
+              priority
+            />
           </div>
         </Link>
 

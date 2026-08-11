@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 import { useAuth } from '@/context/AuthContext';
 import { 
   FaTachometerAlt, FaCalendarAlt, FaMoneyBillWave, FaStar, 
@@ -12,7 +13,6 @@ export default function DashboardSidebar() {
   const { activeRole, switchRole, logout } = useAuth();
   const currentPath = router.pathname;
 
-  // Define menus based on active role
   const providerMenu = [
     { label: 'Dashboard', icon: FaTachometerAlt, href: '/dashboard/provider' },
     { label: 'My Jobs', icon: FaCalendarAlt, href: '/dashboard/provider/jobs' },
@@ -38,11 +38,9 @@ export default function DashboardSidebar() {
     window.location.href = '/';
   };
 
-  // ✅ CRITICAL FIX: Force a hard navigation to the new role's home page
   const toggleRole = () => {
     const newRole = activeRole === 'provider' ? 'client' : 'provider';
     switchRole(newRole);
-    // Use window.location.href to force a full page reload and ensure the correct folder loads
     window.location.href = `/dashboard/${newRole}`;
   };
 
@@ -50,16 +48,23 @@ export default function DashboardSidebar() {
     <aside className="w-64 bg-[#00251d] border-r border-[#ff8c00]/10 h-screen fixed left-0 top-20 overflow-y-auto z-40 hidden md:block">
       <div className="p-6">
         <div className="flex items-center gap-3 mb-8 px-2">
-          <div className="w-10 h-10 bg-[#ff8c00] rounded-xl flex items-center justify-center">
-            <span className="text-xl font-bold text-[#00251d]">K</span>
+          
+          {/* ✅ ONLY THE REAL LOGO - BIG & CURVED (In Sidebar) */}
+          <div className="w-12 h-12 relative rounded-xl overflow-hidden shrink-0">
+            <Image
+              src="/logos/konvag-logo.png"
+              alt="Konvag"
+              fill
+              className="object-contain"
+            />
           </div>
+
           <div>
             <h2 className="text-white font-bold">Konvag Panel</h2>
-            <p className="text-[#ff8c00]/60 text-sm capitalize">{activeRole} Mode</p>
+            <p className="text-[#ff8c00]/60 text-xs capitalize">{activeRole} Mode</p>
           </div>
         </div>
 
-        {/* ROLE SWITCHER */}
         <div className="bg-white/10 rounded-xl p-3 mb-6 border border-white/10">
           <div className="flex items-center justify-between text-white/80 text-sm">
             <span className={activeRole === 'provider' ? 'text-[#ff8c00] font-bold' : 'text-white/60'}>Provider</span>

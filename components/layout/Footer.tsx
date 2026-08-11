@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -6,7 +7,9 @@ export default function Footer() {
   return (
     <footer className="bg-black/60 backdrop-blur-sm text-white pt-16 pb-8 border-t border-white/10 relative z-20">
       <div className="container mx-auto px-4">
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+          
           <div>
             <h3 className="text-[#ff8c00] font-bold text-lg mb-5 uppercase tracking-wider">Quick Links</h3>
             <ul className="space-y-3">
@@ -71,7 +74,8 @@ export default function Footer() {
             <Link href="/contact" className="hover:text-[#ff8c00] transition-colors">Contact</Link>
           </div>
         </div>
+
       </div>
     </footer>
-  )
+  );
 }
