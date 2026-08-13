@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaArrowRight, FaCheckCircle, FaShieldAlt, FaClock } from 'react-icons/fa';
-import { useRouter } from 'next/router';
 
 interface ServiceChoiceModalProps {
   isOpen: boolean;
@@ -21,16 +20,7 @@ export default function ServiceChoiceModal({
   subCount
 }: ServiceChoiceModalProps) {
   
-  const router = useRouter();
-
   if (!isOpen) return null;
-
-  // Function to handle the "I need this" click - saves current URL and goes to register
-  const handleSignUpRedirect = () => {
-    // Save the current URL so we can come back after sign up
-    const returnUrl = encodeURIComponent(router.asPath);
-    window.location.href = `/auth/register?redirect=${returnUrl}&role=client`;
-  };
 
   return (
     <div className="fixed inset-0 z-[999] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
@@ -60,40 +50,41 @@ export default function ServiceChoiceModal({
                 <span className="text-[#ff8c00] text-xs font-bold uppercase tracking-wider">Konvag Premium</span>
               </div>
               <h2 className="text-3xl font-bold text-white">{serviceName}</h2>
-              {subCount > 0 && <p className="text-white/60 text-xs mt-1">{subCount} Sub-Categories Available</p>}
+              <p className="text-white/60 text-xs mt-1">{subCount} Sub-Categories Available</p>
             </div>
           </div>
 
           <div className="p-8 md:p-10 flex flex-col justify-center">
+            
             <div className="mb-6">
-              <h3 className="text-2xl font-bold text-white mb-2">Get Started with {serviceName}</h3>
+              <h3 className="text-2xl font-bold text-white mb-2">Explore {serviceName}</h3>
               <p className="text-white/70 text-sm leading-relaxed">
                 {serviceDescription}
               </p>
             </div>
 
             <div className="bg-white/10 rounded-xl p-4 mb-6 border border-white/10">
-              <h4 className="text-white font-bold text-sm mb-2">Why create an account?</h4>
+              <h4 className="text-white font-bold text-sm mb-2">What to expect:</h4>
               <ul className="space-y-2 text-white/70 text-xs">
-                <li className="flex items-center gap-2">✅ Connect with vetted professionals</li>
-                <li className="flex items-center gap-2">✅ Save your favorite providers</li>
-                <li className="flex items-center gap-2">✅ Track your bookings in real-time</li>
+                <li className="flex items-center gap-2">✅ Trusted & vetted professionals</li>
+                <li className="flex items-center gap-2">✅ Transparent, fixed pricing</li>
+                <li className="flex items-center gap-2">✅ Service tracking & secure payments</li>
               </ul>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              {/* ✅ This button triggers the sign-up flow */}
-              <button 
-                onClick={handleSignUpRedirect}
+              <Link 
+                href={`/services/${serviceName.toLowerCase().replace(/\s+/g, '-')}`}
+                onClick={onClose}
                 className="flex-1 bg-[#ff8c00] text-[#003d2e] px-6 py-3 rounded-lg font-bold hover:bg-[#e67a00] transition text-center"
               >
-                Sign Up to Continue <FaArrowRight className="inline w-4 h-4 ml-2" />
-              </button>
+                View Sub-Categories <FaArrowRight className="inline w-4 h-4 ml-2" />
+              </Link>
               <button 
                 onClick={onClose}
                 className="flex-1 border border-white/20 text-white px-6 py-3 rounded-lg font-medium hover:bg-white/10 transition"
               >
-                Cancel
+                Close
               </button>
             </div>
 

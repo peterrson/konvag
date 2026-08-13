@@ -102,6 +102,7 @@ export default function ServicesPage() {
           serviceName={selectedService.name}
           serviceDescription={selectedService.description}
           serviceImage={selectedService.image}
+          subCount={selectedService.subCategories?.length || 0}
         />
       )}
     </>
