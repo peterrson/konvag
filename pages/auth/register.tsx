@@ -10,24 +10,12 @@ export default function RegisterPage() {
 
   const [formData, setFormData] = useState({
     fullName: '', email: '', password: '', confirmPassword: '', agreeTerms: false,
-    // Identity & Location (Common)
     nin: '', bvn: '', phone: '', state: '', lga: '', city: '', 
     streetAddress: '', houseNumber: '', nearestBusStop: '', postalCode: '',
-    // Provider Individual
     skillCategory: '', yearsExperience: '',
-    // Provider Organization
     companyName: '', regNumber: '', website: ''
   });
-  const [errors, setErrors] = useState<{ 
-    fullName?: string; 
-    email?: string; 
-    password?: string; 
-    confirmPassword?: string; 
-    agreeTerms?: string;
-    skillCategory?: string;
-    companyName?: string;
-    phone?: string;
-  }>({});
+  const [errors, setErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
 
   const validateForm = () => {
@@ -56,16 +44,32 @@ export default function RegisterPage() {
     if (errors[name as keyof typeof errors]) setErrors(prev => ({ ...prev, [name]: '' }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (validateForm()) {
       setIsLoading(true);
       setTimeout(() => { 
         setIsLoading(false); 
-        alert(`Registration successful! Role: ${role || 'client'}, Type: ${type || 'N/A'}`);
-        
-        // ✅ Redirect back to the sub-category they were on
-        const redirectUrl = redirect ? String(redirect) : '/auth/login';
+        alert('Registration successful! (Demo)');
+
+        // Save the role to localStorage
+        const userRole = role === 'provider' ? 'provider' : 'client';
+        localStorage.setItem('konvag_user_role', userRole);
+
+        // ✅ FIX: Decode the redirect URL and handle missing values safely
+        let redirectUrl = '/'; // Default fallback
+        if (redirect) {
+          try {
+            // Decode the URL if it was encoded
+            redirectUrl = decodeURIComponent(String(redirect));
+          } catch (e) {
+            redirectUrl = String(redirect);
+          }
+        } else {
+          // Fallback to dashboard based on role
+          redirectUrl = userRole === 'provider' ? '/dashboard/provider' : '/dashboard/client';
+        }
+
         window.location.href = redirectUrl; 
       }, 1500);
     }

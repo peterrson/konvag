@@ -67,6 +67,7 @@ export default function SubCategoryPage() {
           <p className="text-white/70 text-lg mt-2">{category.description}</p>
         </div>
 
+        {/* Sub-Categories Grid */}
         <div className="container mx-auto px-4">
           {category.subCategories && category.subCategories.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -101,13 +102,14 @@ export default function SubCategoryPage() {
         </div>
       </main>
 
+      {/* ✅ THIS IS WHERE THE SIGN UP MODAL BELONGS */}
       {selectedSub && (
         <SignUpChoiceModal
           isOpen={isModalOpen}
           onClose={closeModal}
           serviceName={selectedSub.name}
           serviceImage={selectedSub.image || '/images/service-collage.jpg'}
-          returnUrl={router.asPath} // 👈 Passes the exact URL to return to after sign up
+          returnUrl={router.asPath}
         />
       )}
     </>

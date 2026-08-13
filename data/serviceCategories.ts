@@ -6,7 +6,7 @@ import {
 } from 'react-icons/fa';
 
 export const serviceCategories = [
-  // 1. Home & Domestic
+  // 1. Home & Domestic (Deeply Expanded)
   {
     id: 1,
     name: 'Home & Domestic',
@@ -14,23 +14,38 @@ export const serviceCategories = [
     description: 'Cleaning, plumbing, repairs, and more',
     color: '#ff8c00',
     count: '120+ providers',
-    image: '/images/services/home-domestic.jpg',
+    image: '/images/illustrations/home-domestic.png',
     subCategories: [
       { name: 'House Cleaning', image: '/images/sub/cleaning.jpg' },
-      { name: 'Laundry', image: '/images/sub/laundry.jpg' },
-      { name: 'Plumbing', image: '/images/sub/plumbing.jpg' },
+      { name: 'Deep Cleaning', image: '/images/sub/deep-cleaning.jpg' },
+      { name: 'Laundry & Dry Cleaning', image: '/images/sub/laundry.jpg' },
+      { name: 'Plumbing Repair', image: '/images/sub/plumbing.jpg' },
+      { name: 'Pipe Installation', image: '/images/sub/pipe-installation.jpg' },
+      { name: 'Drain Cleaning', image: '/images/sub/drain-cleaning.jpg' },
+      { name: 'Water Heater Repair', image: '/images/sub/water-heater.jpg' },
       { name: 'Electrical Repairs', image: '/images/sub/electrical.jpg' },
-      { name: 'Gardening', image: '/images/sub/gardening.jpg' },
-      { name: 'Painting', image: '/images/sub/painting.jpg' },
+      { name: 'Wiring & Rewiring', image: '/images/sub/wiring.jpg' },
+      { name: 'Lighting Installation', image: '/images/sub/lighting.jpg' },
+      { name: 'Gardening & Landscaping', image: '/images/sub/gardening.jpg' },
+      { name: 'Lawn Mowing', image: '/images/sub/lawn-mowing.jpg' },
+      { name: 'Tree Trimming', image: '/images/sub/tree-trimming.jpg' },
+      { name: 'Painting Services', image: '/images/sub/painting.jpg' },
+      { name: 'Interior Painting', image: '/images/sub/interior-painting.jpg' },
       { name: 'Carpentry', image: '/images/sub/carpentry.jpg' },
+      { name: 'Furniture Assembly', image: '/images/sub/furniture-assembly.jpg' },
       { name: 'Pest Control', image: '/images/sub/pest-control.jpg' },
       { name: 'Home Security Installation', image: '/images/sub/security-install.jpg' },
       { name: 'Appliance Repair', image: '/images/sub/appliance-repair.jpg' },
+      { name: 'Refrigerator Repair', image: '/images/sub/fridge-repair.jpg' },
+      { name: 'AC & HVAC Repair', image: '/images/sub/ac-repair.jpg' },
       { name: 'Interior Decoration', image: '/images/sub/interior-decoration.jpg' },
       { name: 'Waste Disposal', image: '/images/sub/waste-disposal.jpg' },
+      { name: 'Window Cleaning', image: '/images/sub/window-cleaning.jpg' },
+      { name: 'Fence Repair', image: '/images/sub/fence-repair.jpg' },
+      { name: 'Roof Repair', image: '/images/sub/roof-repair.jpg' },
     ]
   },
-  // 2. Health & Wellness
+  // 2. Health & Wellness (Deeply Expanded)
   {
     id: 2,
     name: 'Health & Wellness',
@@ -38,22 +53,32 @@ export const serviceCategories = [
     description: 'Nursing, therapy, fitness, and wellness',
     color: '#ff8c00',
     count: '85+ providers',
-    image: '/images/services/health-wellness.jpg',
+    image: '/images/illustrations/health-wellness.png',
     subCategories: [
       { name: 'General Medical Services', image: '/images/sub/medical.jpg' },
-      { name: 'Nursing', image: '/images/sub/nursing.jpg' },
+      { name: 'Home Visit Doctor', image: '/images/sub/home-doctor.jpg' },
+      { name: 'Nursing Care', image: '/images/sub/nursing.jpg' },
+      { name: 'Home Health Aide', image: '/images/sub/home-health.jpg' },
       { name: 'Physiotherapy', image: '/images/sub/physiotherapy.jpg' },
+      { name: 'Sports Massage', image: '/images/sub/sports-massage.jpg' },
       { name: 'Personal Training', image: '/images/sub/personal-training.jpg' },
+      { name: 'Online Fitness Coaching', image: '/images/sub/fitness-coaching.jpg' },
       { name: 'Massage Therapy', image: '/images/sub/massage.jpg' },
       { name: 'Nutrition Consulting', image: '/images/sub/nutrition.jpg' },
+      { name: 'Diet Plan Customization', image: '/images/sub/diet-plan.jpg' },
       { name: 'Mental Health Counseling', image: '/images/sub/counseling.jpg' },
+      { name: 'Psychology & Therapy', image: '/images/sub/psychology.jpg' },
       { name: 'Yoga Instruction', image: '/images/sub/yoga.jpg' },
+      { name: 'Pilates Instruction', image: '/images/sub/pilates.jpg' },
       { name: 'Dentistry', image: '/images/sub/dentistry.jpg' },
+      { name: 'Teeth Whitening', image: '/images/sub/teeth-whitening.jpg' },
       { name: 'Optometry', image: '/images/sub/optometry.jpg' },
+      { name: 'Eye Checkup', image: '/images/sub/eye-checkup.jpg' },
       { name: 'Midwifery', image: '/images/sub/midwifery.jpg' },
+      { name: 'Newborn Care', image: '/images/sub/newborn-care.jpg' },
     ]
   },
-  // 3. Beauty & Personal Care
+  // 3. Beauty & Personal Care (Deeply Expanded)
   {
     id: 3,
     name: 'Beauty & Personal Care',
@@ -61,21 +86,29 @@ export const serviceCategories = [
     description: 'Hair, makeup, spa, and grooming',
     color: '#ff8c00',
     count: '95+ providers',
-    image: '/images/services/beauty-care.jpg',
+    image: '/images/illustrations/beauty-care.png',
     subCategories: [
       { name: 'Hair Styling', image: '/images/sub/hair-styling.jpg' },
+      { name: 'Hair Coloring', image: '/images/sub/hair-coloring.jpg' },
+      { name: 'Extensions & Weaves', image: '/images/sub/extensions.jpg' },
       { name: 'Makeup Services', image: '/images/sub/makeup.jpg' },
+      { name: 'Bridal Makeup', image: '/images/sub/bridal-makeup.jpg' },
       { name: 'Nail Care', image: '/images/sub/nails.jpg' },
+      { name: 'Manicure & Pedicure', image: '/images/sub/manicure.jpg' },
       { name: 'Barber Services', image: '/images/sub/barber.jpg' },
+      { name: 'Beard Shaping', image: '/images/sub/beard-shaping.jpg' },
       { name: 'Spa Treatments', image: '/images/sub/spa.jpg' },
+      { name: 'Facials & Skincare', image: '/images/sub/facials.jpg' },
       { name: 'Tattooing', image: '/images/sub/tattoo.jpg' },
       { name: 'Body Piercing', image: '/images/sub/piercing.jpg' },
       { name: 'Skin Care Consulting', image: '/images/sub/skincare.jpg' },
+      { name: 'Acne Treatment', image: '/images/sub/acne-treatment.jpg' },
       { name: 'Cosmetic Surgery', image: '/images/sub/cosmetic.jpg' },
       { name: 'Weight Management', image: '/images/sub/weight-loss.jpg' },
+      { name: 'Laser Hair Removal', image: '/images/sub/laser-hair.jpg' },
     ]
   },
-  // 4. Automotive Services
+  // 4. Automotive Services (Deeply Expanded)
   {
     id: 4,
     name: 'Automotive Services',
@@ -83,21 +116,28 @@ export const serviceCategories = [
     description: 'Car wash, repairs, towing, and rentals',
     color: '#ff8c00',
     count: '60+ providers',
-    image: '/images/services/automotive.jpg',
+    image: '/images/illustrations/automotive.png',
     subCategories: [
-      { name: 'Car Wash', image: '/images/sub/car-wash.jpg' },
+      { name: 'Car Wash & Detailing', image: '/images/sub/car-wash.jpg' },
+      { name: 'Hand Wash Services', image: '/images/sub/hand-wash.jpg' },
       { name: 'Auto Repair', image: '/images/sub/auto-repair.jpg' },
+      { name: 'Engine Diagnostics', image: '/images/sub/engine-diagnostics.jpg' },
       { name: 'Tire Replacement', image: '/images/sub/tire-replacement.jpg' },
+      { name: 'Tire Rotation', image: '/images/sub/tire-rotation.jpg' },
       { name: 'Battery Charging', image: '/images/sub/battery.jpg' },
+      { name: 'Jump Start Services', image: '/images/sub/jump-start.jpg' },
       { name: 'Towing', image: '/images/sub/towing.jpg' },
+      { name: 'Emergency Roadside', image: '/images/sub/roadside.jpg' },
       { name: 'Car Interior Cleaning', image: '/images/sub/interior-cleaning.jpg' },
       { name: 'Oil Change', image: '/images/sub/oil-change.jpg' },
       { name: 'Vehicle Inspection', image: '/images/sub/inspection.jpg' },
       { name: 'Car Rental', image: '/images/sub/car-rental.jpg' },
+      { name: 'Luxury Car Rental', image: '/images/sub/luxury-rental.jpg' },
       { name: 'Driver Training', image: '/images/sub/driver-training.jpg' },
+      { name: 'Driving Lessons', image: '/images/sub/driving-lessons.jpg' },
     ]
   },
-  // 5. Technology & Digital
+  // 5. Technology & Digital (Deeply Expanded)
   {
     id: 5,
     name: 'Technology & Digital',
@@ -105,22 +145,29 @@ export const serviceCategories = [
     description: 'Web dev, design, marketing, and IT support',
     color: '#ff8c00',
     count: '150+ providers',
-    image: '/images/services/technology.jpg',
+    image: '/images/illustrations/technology.png',
     subCategories: [
       { name: 'Web Development', image: '/images/sub/web-dev.jpg' },
+      { name: 'Landing Pages', image: '/images/sub/landing-pages.jpg' },
       { name: 'App Development', image: '/images/sub/app-dev.jpg' },
+      { name: 'Mobile App Development', image: '/images/sub/mobile-app.jpg' },
       { name: 'Graphic Design', image: '/images/sub/graphic-design.jpg' },
+      { name: 'Logo Design', image: '/images/sub/logo-design.jpg' },
       { name: 'UI/UX Design', image: '/images/sub/ui-ux.jpg' },
       { name: 'Digital Marketing', image: '/images/sub/digital-marketing.jpg' },
+      { name: 'Social Media Management', image: '/images/sub/social-media.jpg' },
       { name: 'SEO Optimization', image: '/images/sub/seo.jpg' },
       { name: 'Content Writing', image: '/images/sub/content-writing.jpg' },
+      { name: 'Copywriting', image: '/images/sub/copywriting.jpg' },
       { name: 'Data Analysis', image: '/images/sub/data-analysis.jpg' },
       { name: 'IT Support', image: '/images/sub/it-support.jpg' },
+      { name: 'Computer Repair', image: '/images/sub/computer-repair.jpg' },
       { name: 'Cybersecurity', image: '/images/sub/cybersecurity.jpg' },
       { name: 'Software Installation', image: '/images/sub/software-install.jpg' },
+      { name: 'Email & Hosting Setup', image: '/images/sub/email-hosting.jpg' },
     ]
   },
-  // 6. Education & Tutoring
+  // 6. Education & Tutoring (Deeply Expanded)
   {
     id: 6,
     name: 'Education & Tutoring',
@@ -128,20 +175,30 @@ export const serviceCategories = [
     description: 'Tutoring, language, music, and coaching',
     color: '#ff8c00',
     count: '70+ providers',
-    image: '/images/services/education.jpg',
+    image: '/images/illustrations/education.png',
     subCategories: [
       { name: 'Private Tutoring', image: '/images/sub/tutoring.jpg' },
+      { name: 'Math Tutoring', image: '/images/sub/math-tutoring.jpg' },
+      { name: 'English Tutoring', image: '/images/sub/english-tutoring.jpg' },
+      { name: 'Science Tutoring', image: '/images/sub/science-tutoring.jpg' },
       { name: 'Online Courses', image: '/images/sub/online-courses.jpg' },
       { name: 'Language Training', image: '/images/sub/language.jpg' },
+      { name: 'Spanish Lessons', image: '/images/sub/spanish.jpg' },
+      { name: 'French Lessons', image: '/images/sub/french.jpg' },
       { name: 'Exam Coaching', image: '/images/sub/exam-coaching.jpg' },
+      { name: 'SAT/ACT Prep', image: '/images/sub/sat-prep.jpg' },
       { name: 'Music Lessons', image: '/images/sub/music-lessons.jpg' },
+      { name: 'Guitar Lessons', image: '/images/sub/guitar.jpg' },
+      { name: 'Piano Lessons', image: '/images/sub/piano.jpg' },
       { name: 'STEM Tutoring', image: '/images/sub/stem.jpg' },
+      { name: 'Robotics Classes', image: '/images/sub/robotics.jpg' },
       { name: 'Vocational Training', image: '/images/sub/vocational.jpg' },
       { name: 'Educational Counseling', image: '/images/sub/edu-counseling.jpg' },
       { name: 'Career Coaching', image: '/images/sub/career-coaching.jpg' },
+      { name: 'Resume Writing', image: '/images/sub/resume-writing.jpg' },
     ]
   },
-  // 7. Event & Entertainment
+  // 7. Event & Entertainment (Deeply Expanded)
   {
     id: 7,
     name: 'Event & Entertainment',
@@ -149,11 +206,14 @@ export const serviceCategories = [
     description: 'Planning, catering, photography, and DJ',
     color: '#ff8c00',
     count: '65+ providers',
-    image: '/images/services/events.jpg',
+    image: '/images/illustrations/events.png',
     subCategories: [
       { name: 'Event Planning', image: '/images/sub/event-planning.jpg' },
-      { name: 'Catering', image: '/images/sub/catering.jpg' },
+      { name: 'Wedding Planning', image: '/images/sub/wedding-planning.jpg' },
+      { name: 'Catering Services', image: '/images/sub/catering.jpg' },
+      { name: 'Buffet & Party Catering', image: '/images/sub/buffet-catering.jpg' },
       { name: 'Photography', image: '/images/sub/photography.jpg' },
+      { name: 'Event Photography', image: '/images/sub/event-photography.jpg' },
       { name: 'Videography', image: '/images/sub/videography.jpg' },
       { name: 'DJ Services', image: '/images/sub/dj.jpg' },
       { name: 'MC & Hosting', image: '/images/sub/mc-hosting.jpg' },
@@ -161,6 +221,7 @@ export const serviceCategories = [
       { name: 'Live Band', image: '/images/sub/live-band.jpg' },
       { name: 'Sound Engineering', image: '/images/sub/sound-engineering.jpg' },
       { name: 'Lighting Setup', image: '/images/sub/lighting.jpg' },
+      { name: 'Party Rentals', image: '/images/sub/party-rentals.jpg' },
     ]
   },
   // 8. Business & Professional
@@ -171,9 +232,10 @@ export const serviceCategories = [
     description: 'Accounting, legal, HR, and consulting',
     color: '#ff8c00',
     count: '55+ providers',
-    image: '/images/services/business.jpg',
+    image: '/images/illustrations/business.png',
     subCategories: [
       { name: 'Accounting', image: '/images/sub/accounting.jpg' },
+      { name: 'Bookkeeping', image: '/images/sub/bookkeeping.jpg' },
       { name: 'Legal Consulting', image: '/images/sub/legal.jpg' },
       { name: 'Tax Preparation', image: '/images/sub/tax.jpg' },
       { name: 'HR Consulting', image: '/images/sub/hr.jpg' },
@@ -183,6 +245,7 @@ export const serviceCategories = [
       { name: 'Virtual Assistance', image: '/images/sub/virtual-assist.jpg' },
       { name: 'Project Management', image: '/images/sub/project-mgmt.jpg' },
       { name: 'Customer Service Outsourcing', image: '/images/sub/customer-service.jpg' },
+      { name: 'Business Strategy', image: '/images/sub/strategy.jpg' },
     ]
   },
   // 9. Travel & Logistics
@@ -193,7 +256,7 @@ export const serviceCategories = [
     description: 'Booking, courier, freight, and tours',
     color: '#ff8c00',
     count: '40+ providers',
-    image: '/images/services/travel.jpg',
+    image: '/images/illustrations/travel.png',
     subCategories: [
       { name: 'Travel Agency', image: '/images/sub/travel-agency.jpg' },
       { name: 'Hotel Booking', image: '/images/sub/hotel-booking.jpg' },
@@ -204,6 +267,7 @@ export const serviceCategories = [
       { name: 'Tour Guiding', image: '/images/sub/tour-guide.jpg' },
       { name: 'Visa Assistance', image: '/images/sub/visa.jpg' },
       { name: 'Moving Services', image: '/images/sub/moving.jpg' },
+      { name: 'Packing & Loading', image: '/images/sub/packing.jpg' },
     ]
   },
   // 10. Construction & Real Estate
@@ -214,7 +278,7 @@ export const serviceCategories = [
     description: 'Building, architecture, and property',
     color: '#ff8c00',
     count: '75+ providers',
-    image: '/images/services/construction.jpg',
+    image: '/images/illustrations/construction.png',
     subCategories: [
       { name: 'Building Construction', image: '/images/sub/building.jpg' },
       { name: 'Architecture', image: '/images/sub/architecture.jpg' },
@@ -225,6 +289,7 @@ export const serviceCategories = [
       { name: 'Property Valuation', image: '/images/sub/property-valuation.jpg' },
       { name: 'Interior Design', image: '/images/sub/interior-design.jpg' },
       { name: 'Building Inspection', image: '/images/sub/building-inspection.jpg' },
+      { name: 'Home Renovation', image: '/images/sub/renovation.jpg' },
     ]
   },
   // 11. Agriculture & Environment
@@ -235,10 +300,11 @@ export const serviceCategories = [
     description: 'Farming, irrigation, and forestry',
     color: '#ff8c00',
     count: '30+ providers',
-    image: '/images/services/agriculture.jpg',
+    image: '/images/illustrations/agriculture.png',
     subCategories: [
       { name: 'Crop Farming', image: '/images/sub/crop-farming.jpg' },
       { name: 'Animal Rearing', image: '/images/sub/animal-rearing.jpg' },
+      { name: 'Poultry Farming', image: '/images/sub/poultry.jpg' },
       { name: 'Agro Consulting', image: '/images/sub/agro-consulting.jpg' },
       { name: 'Irrigation Services', image: '/images/sub/irrigation.jpg' },
       { name: 'Soil Testing', image: '/images/sub/soil-testing.jpg' },
@@ -257,7 +323,7 @@ export const serviceCategories = [
     description: 'Advisory, trading, insurance, and loans',
     color: '#ff8c00',
     count: '45+ providers',
-    image: '/images/services/finance.jpg',
+    image: '/images/illustrations/finance.png',
     subCategories: [
       { name: 'Financial Advisory', image: '/images/sub/financial-advisory.jpg' },
       { name: 'Stock Trading', image: '/images/sub/stock-trading.jpg' },
@@ -278,9 +344,10 @@ export const serviceCategories = [
     description: 'Tailoring, design, modeling, and jewelry',
     color: '#ff8c00',
     count: '80+ providers',
-    image: '/images/services/fashion.jpg',
+    image: '/images/illustrations/fashion.png',
     subCategories: [
       { name: 'Tailoring', image: '/images/sub/tailoring.jpg' },
+      { name: 'Custom Suits', image: '/images/sub/custom-suits.jpg' },
       { name: 'Fashion Design', image: '/images/sub/fashion-design.jpg' },
       { name: 'Modeling', image: '/images/sub/modeling.jpg' },
       { name: 'Wardrobe Consulting', image: '/images/sub/wardrobe.jpg' },
@@ -300,7 +367,7 @@ export const serviceCategories = [
     description: 'Catering, private chef, baking, and delivery',
     color: '#ff8c00',
     count: '110+ providers',
-    image: '/images/services/food-culinary.jpg',
+    image: '/images/illustrations/food-culinary.png',
     subCategories: [
       { name: 'Catering', image: '/images/sub/catering.jpg' },
       { name: 'Private Chef', image: '/images/sub/private-chef.jpg' },
@@ -311,6 +378,8 @@ export const serviceCategories = [
       { name: 'Nutrition Planning', image: '/images/sub/nutrition-planning.jpg' },
       { name: 'Cooking Classes', image: '/images/sub/cooking-classes.jpg' },
       { name: 'Diet Meal Prep', image: '/images/sub/diet-meal-prep.jpg' },
+      { name: 'Bulk Catering', image: '/images/sub/bulk-catering.jpg' },
+      { name: 'Event Food Trucks', image: '/images/sub/food-trucks.jpg' },
     ]
   },
   // 15. Media & Communication
@@ -321,7 +390,7 @@ export const serviceCategories = [
     description: 'PR, advertising, podcasting, and editing',
     color: '#ff8c00',
     count: '50+ providers',
-    image: '/images/services/media.jpg',
+    image: '/images/illustrations/media.png',
     subCategories: [
       { name: 'Journalism', image: '/images/sub/journalism.jpg' },
       { name: 'Public Relations', image: '/images/sub/pr.jpg' },
@@ -331,6 +400,7 @@ export const serviceCategories = [
       { name: 'Social Media Management', image: '/images/sub/social-media.jpg' },
       { name: 'Video Editing', image: '/images/sub/video-editing.jpg' },
       { name: 'Brand Consulting', image: '/images/sub/brand-consulting.jpg' },
+      { name: 'Copy Editing', image: '/images/sub/copy-editing.jpg' },
     ]
   },
   // 16. Security & Safety
@@ -341,7 +411,7 @@ export const serviceCategories = [
     description: 'Private security, CCTV, and fire safety',
     color: '#ff8c00',
     count: '35+ providers',
-    image: '/images/services/security.jpg',
+    image: '/images/illustrations/security.png',
     subCategories: [
       { name: 'Private Security', image: '/images/sub/private-security.jpg' },
       { name: 'Bouncer Services', image: '/images/sub/bouncer.jpg' },
@@ -360,7 +430,7 @@ export const serviceCategories = [
     description: 'Babysitting, nanny, and elderly assistance',
     color: '#ff8c00',
     count: '60+ providers',
-    image: '/images/services/childcare.jpg',
+    image: '/images/illustrations/childcare.png',
     subCategories: [
       { name: 'Babysitting', image: '/images/sub/babysitting.jpg' },
       { name: 'Childcare', image: '/images/sub/childcare.jpg' },
@@ -368,6 +438,7 @@ export const serviceCategories = [
       { name: 'Nanny Services', image: '/images/sub/nanny.jpg' },
       { name: 'Special Needs Assistance', image: '/images/sub/special-needs.jpg' },
       { name: 'Home Health Aides', image: '/images/sub/home-health.jpg' },
+      { name: 'Toddler Care', image: '/images/sub/toddler-care.jpg' },
     ]
   },
   // 18. Sports & Recreation
@@ -378,14 +449,17 @@ export const serviceCategories = [
     description: 'Coaching, fitness training, and dance',
     color: '#ff8c00',
     count: '40+ providers',
-    image: '/images/services/sports.jpg',
+    image: '/images/illustrations/sports.png',
     subCategories: [
       { name: 'Sports Coaching', image: '/images/sub/sports-coaching.jpg' },
+      { name: 'Football Coaching', image: '/images/sub/football-coaching.jpg' },
       { name: 'Fitness Training', image: '/images/sub/fitness-training.jpg' },
       { name: 'Gym Management', image: '/images/sub/gym.jpg' },
       { name: 'Dance Instruction', image: '/images/sub/dance.jpg' },
       { name: 'Martial Arts Training', image: '/images/sub/martial-arts.jpg' },
       { name: 'Recreational Camp Services', image: '/images/sub/recreational-camp.jpg' },
+      { name: 'Swimming Lessons', image: '/images/sub/swimming.jpg' },
+      { name: 'Basketball Coaching', image: '/images/sub/basketball.jpg' },
     ]
   },
   // 19. Spiritual & Religious
@@ -396,7 +470,7 @@ export const serviceCategories = [
     description: 'Counseling, prayer services, and mentoring',
     color: '#ff8c00',
     count: '20+ providers',
-    image: '/images/services/spiritual.jpg',
+    image: '/images/illustrations/spiritual.png',
     subCategories: [
       { name: 'Counseling', image: '/images/sub/counseling.jpg' },
       { name: 'Prayer Services', image: '/images/sub/prayer-services.jpg' },
@@ -413,11 +487,13 @@ export const serviceCategories = [
     description: 'Handyman, repairs, and miscellaneous',
     color: '#ff8c00',
     count: '200+ providers',
-    image: '/images/services/general.jpg',
+    image: '/images/illustrations/general.png',
     subCategories: [
       { name: 'Handyman', image: '/images/sub/handyman.jpg' },
       { name: 'General Repairs', image: '/images/sub/general-repairs.jpg' },
       { name: 'Miscellaneous', image: '/images/sub/miscellaneous.jpg' },
+      { name: 'Odd Jobs', image: '/images/sub/odd-jobs.jpg' },
+      { name: 'Labor Hire', image: '/images/sub/labor-hire.jpg' },
     ]
   }
 ];

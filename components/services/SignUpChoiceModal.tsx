@@ -24,7 +24,7 @@ export default function SignUpChoiceModal({
 
   // Handle Client Choice
   const handleClientChoice = () => {
-    const encodedReturn = encodeURIComponent(returnUrl);
+    const encodedReturn = encodeURIComponent(returnUrl || router.asPath);
     window.location.href = `/auth/register?role=client&redirect=${encodedReturn}`;
   };
 

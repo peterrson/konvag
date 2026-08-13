@@ -7,6 +7,7 @@ import { useAuth } from '@/context/AuthContext';
 import NotificationDrawer from '@/components/notifications/NotificationDrawer';
 import MessageDrawer from '@/components/notifications/MessageDrawer';
 import { serviceCategories } from '@/data/serviceCategories';
+import ThemeToggle from '@/components/ui/ThemeToggle';
 
 export default function DashboardNavbar() {
   const { user, logout } = useAuth();
@@ -58,19 +59,21 @@ export default function DashboardNavbar() {
     <nav className="bg-[#003d2e] shadow-lg fixed top-0 left-0 w-full z-50 border-b border-[#ff8c00]/20 h-20">
       <div className="container mx-auto px-4 h-full flex items-center justify-between">
         
-        {/* ✅ ONLY THE REAL LOGO - BIG & CURVED */}
+        {/* BIG CURVED LOGO - NO TEXT */}
         <Link href="/dashboard/provider" className="flex items-center group">
           <div className="w-16 h-16 relative rounded-2xl overflow-hidden shrink-0">
             <Image
               src="/logos/konvag-logo.png"
               alt="Konvag"
               fill
+              sizes="(max-width: 768px) 100vw, 64px"
               className="object-contain"
               priority
             />
           </div>
         </Link>
 
+        {/* SEARCH BAR */}
         <div className="hidden md:flex flex-1 max-w-xl mx-8 relative" ref={searchRef}>
           <form onSubmit={handleSearchSubmit} className="relative w-full">
             <input 
@@ -115,7 +118,13 @@ export default function DashboardNavbar() {
           )}
         </div>
 
+        {/* RIGHT SIDE: Toggle + Notif + Msg + Profile */}
         <div className="hidden md:flex items-center gap-3">
+          
+          {/* ✅ THEME TOGGLE BUTTON */}
+          <ThemeToggle />
+
+          {/* Notification Icon */}
           <div className="relative">
             <button 
               onClick={() => { setShowNotifications(!showNotifications); setShowMessages(false); }} 
@@ -127,6 +136,7 @@ export default function DashboardNavbar() {
             <NotificationDrawer isOpen={showNotifications} onClose={() => setShowNotifications(false)} />
           </div>
 
+          {/* Message Icon */}
           <div className="relative">
             <button 
               onClick={() => { setShowMessages(!showMessages); setShowNotifications(false); }} 
@@ -138,6 +148,7 @@ export default function DashboardNavbar() {
             <MessageDrawer isOpen={showMessages} onClose={() => setShowMessages(false)} />
           </div>
 
+          {/* Profile Icon */}
           <div className="relative group">
             <button className="flex items-center gap-2 text-white hover:text-[#ff8c00] transition">
               <FaUserCircle className="w-8 h-8" />
@@ -153,6 +164,16 @@ export default function DashboardNavbar() {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Mobile Hamburger & Toggle */}
+        <div className="flex items-center gap-3 md:hidden">
+          <ThemeToggle />
+          <button className="md:hidden text-white" onClick={() => setIsSearchFocused(!isSearchFocused)}>
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </button>
         </div>
       </div>
     </nav>
