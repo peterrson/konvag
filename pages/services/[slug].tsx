@@ -103,12 +103,14 @@ export default function SubCategoryPage() {
       </main>
 
       {/* ✅ THIS IS WHERE THE SIGN UP MODAL BELONGS */}
-      {selectedSub && (
+            {selectedSub && (
         <SignUpChoiceModal
           isOpen={isModalOpen}
           onClose={closeModal}
           serviceName={selectedSub.name}
+          serviceDescription="Sign up to find the best professionals for this service."
           serviceImage={selectedSub.image || '/images/service-collage.jpg'}
+          subCount={0}
           returnUrl={router.asPath}
         />
       )}
