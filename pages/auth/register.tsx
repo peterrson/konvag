@@ -15,12 +15,15 @@ export default function RegisterPage() {
     skillCategory: '', yearsExperience: '',
     companyName: '', regNumber: '', website: ''
   });
-  const [errors, setErrors] = useState({});
+  
+  // ✅ FIX: TypeScript now knows errors can have any string key with string values
+  const [errors, setErrors] = useState<Record<string, string>>({});
+
   const [isLoading, setIsLoading] = useState(false);
 
   const validateForm = () => {
     let isValid = true;
-    const newErrors = {} as any;
+    const newErrors: Record<string, string> = {};
     if (!formData.fullName.trim()) { newErrors.fullName = 'Full name is required'; isValid = false; }
     if (!formData.email) { newErrors.email = 'Email is required'; isValid = false; }
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) { newErrors.email = 'Invalid email'; isValid = false; }
@@ -41,10 +44,10 @@ export default function RegisterPage() {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({ ...prev, [name]: type === 'checkbox' ? checked : value }));
-    if (errors[name as keyof typeof errors]) setErrors(prev => ({ ...prev, [name]: '' }));
+    if (errors[name]) setErrors(prev => ({ ...prev, [name]: '' }));
   };
 
-    const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (validateForm()) {
       setIsLoading(true);
@@ -56,21 +59,9 @@ export default function RegisterPage() {
         const userRole = role === 'provider' ? 'provider' : 'client';
         localStorage.setItem('konvag_user_role', userRole);
 
-        // ✅ FIX: Decode the redirect URL and handle missing values safely
-        let redirectUrl = '/'; // Default fallback
-        if (redirect) {
-          try {
-            // Decode the URL if it was encoded
-            redirectUrl = decodeURIComponent(String(redirect));
-          } catch (e) {
-            redirectUrl = String(redirect);
-          }
-        } else {
-          // Fallback to dashboard based on role
-          redirectUrl = userRole === 'provider' ? '/dashboard/provider' : '/dashboard/client';
-        }
-
-        window.location.href = redirectUrl; 
+        // Determine where to redirect
+        const finalRedirect = redirect ? String(redirect) : (userRole === 'provider' ? '/dashboard/provider' : '/dashboard/client');
+        window.location.href = finalRedirect; 
       }, 1500);
     }
   };
